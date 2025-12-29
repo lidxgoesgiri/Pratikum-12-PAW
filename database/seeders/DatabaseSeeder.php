@@ -1,3 +1,4 @@
+
 <?php
 
 namespace Database\Seeders;
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
-            'password' => 'password',
+            'password' => bcrypt('password'),
             'role' => 'admin',
         ]);
 
@@ -27,7 +28,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Regular User',
             'email' => 'user@example.com',
-            'password' => 'password',
+            'password' => bcrypt('password'),
             'role' => 'user',
         ]);
     }
